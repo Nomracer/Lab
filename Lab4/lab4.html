@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SCHOOL GRADE</title>
+
+    <script type="text/javascript">
+
+        var ort, ln;
+
+
+
+        function calculate() {
+            s1 = parseFloat(document.getElementById('Midterm').value);
+            s2 = parseFloat(document.getElementById('attendence').value);
+            s3 = parseFloat(document.getElementById('final').value);
+            s4 = parseFloat(document.getElementById('lab').value);
+
+            ort = 0.05 * s2 + 0.4 * s3 + 0.35 * s1 + 0.2 * s4
+            alert(ort);
+        }
+
+
+        function letter() {
+            s1 = parseFloat(document.getElementById('Midterm').value);
+            s2 = parseFloat(document.getElementById('attendence').value);
+            s3 = parseFloat(document.getElementById('final').value);
+            s4 = parseFloat(document.getElementById('lab').value);
+
+            ort = 0.05 * s2 + 0.4 * s3 + 0.35 * s1 + 0.2 * s4
+            if (ort >= 85 && ort <= 100)
+                 ln = 'A';
+            else if (ort >= 70 && ort < 85)
+                ln = 'B';
+            else if (ort >= 55 && ort < 70)
+                ln = 'C';
+            else if (ort >= 45 && ort < 55)
+                ln = 'D';
+            else if (ort >= 0 && ort < 45)
+                ln = 'E';
+
+            alert(ln);
+        }
+
+
+
+
+    </script>
+
+    <style>
+        div {
+            display: grid;
+            align-content: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+
+            Attendence :<input type="text" name="attendence" id="attendence"><br />
+            Final :<input type="text" name="final" id="final"><br />
+            Lab :<input type="text" name="lab" id="lab"><br />
+            Midterm :<input type="text" name="Midterm" id="Midterm"><br />
+
+
+
+            <input type="button" onclick="calculate();" value="Grade" />
+            <input type="button" onclick="letter();" value="Letter Grade" />
+
+        </div>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script>
+        var sonuc;
+
+
+        function topla() {
+            var sayi1 = Number(document.getElementById("num1").value);
+            var sayi2 = Number(document.getElementById("num2").value);
+            sonuc = sayi1 + sayi2;
+            document.getElementById('sonuc').value = sonuc;
+        }
+
+        function cikar() {
+            var sayi1 = Number(document.getElementById("num1").value);
+            var sayi2 = Number(document.getElementById("num2").value);
+            sonuc = sayi1 - sayi2;
+            document.getElementById('sonuc').value = sonuc;
+        }
+        function carp() {
+            var sayi1 = Number(document.getElementById("num1").value);
+            var sayi2 = Number(document.getElementById("num2").value);
+            sonuc = sayi1 * sayi2;
+            document.getElementById('sonuc').value = sonuc;
+        }
+        function bol() {
+            var sayi1 = Number(document.getElementById("num1").value);
+            var sayi2 = Number(document.getElementById("num2").value);
+            sonuc = sayi1 / sayi2;
+            document.getElementById('sonuc').value = sonuc;
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <form style="background-color: yellow; height:350px;  display:flex; justify-content:center; ">
+        <div>
+            <h1>Aritmatic Operations</h1>
+            <hr color="red" width="100%" align="justify-items">
+            <u>Enter a number in each text box</u> <br><br>
+
+            Number 1 :<input type="text" name="num1" id="num1"><br /><br>
+            Number 2 :<input type="text" name="num2" id="num2"><br /><br>
+
+
+
+            <input type="button" onclick="topla();" value="Add" />
+            <input type="button" onclick="cikar();" value="Substract" />
+            <input type="button" onclick="carp();" value="Multiply" />
+            <input type="button" onclick="bol();" value="Divide" /><br /><br>
+            <span style="color: red;">
+                Result is: <input type="text" name="sonuc" id="sonuc"><br />
+            </span>
+        </div>
+
+    </form>
+
+
+    <script>
+        var num, r, x;
+        function test() {
+            num = document.myform.n1.value;
+
+            for (x = 1; x <= 10; x++) {
+                document.write(x * num);
+                document.write("\n");
+                
+            }
+
+
+
+        }
+    </script>
+<div style="margin: 100px 0px; background-color: aqua; padding-top:100px; padding-bottom: 100px;">
+
+    <form name="myform" style="padding: 0px 20px;">
+        Number: <input type="text" name="n1" value=""> <br><br>
+        <input type="button" value="Multipication Table" onClick="test()"><br>
+        
+        
+    </form>
+</div>
+
+</body>
+
+</html>
